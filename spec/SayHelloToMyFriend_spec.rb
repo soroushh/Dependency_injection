@@ -3,7 +3,8 @@ require "SayHelloToMyFriend"
 describe SayHelloToMyLittleFriend do
   it "tests the run method" do
     dbl = double()
-    object = SayHelloToMyLittleFriend.new(dbl,dbl,dbl)
-    expect(object.run).to eq dbl
+    dbl2 = double(message: dbl)
+    expect(dbl).to receive(:send)
+    subject.run(dbl2)
   end
 end
