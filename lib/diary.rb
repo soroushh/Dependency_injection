@@ -5,7 +5,7 @@ class Diary
     @entries = []
   end
 
-  def add(title, body, entry = Entry.new(title,body))
+  def add(title, body, entry = Entry.new(title, body) )
     @entries << entry
   end
 
