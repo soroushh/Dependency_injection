@@ -9,4 +9,10 @@ describe Greeter do
     expect {subject.greet(dbl2)}.to output("What is your name?\nHello, #{dbl4}\n").to_stdout
   end
 
+  it "is a practice to make doubles with arguments" do
+    dbl5 = double()
+    expect(dbl5).to receive(:soroush).with(any_args){"b"}
+    expect(dbl5.soroush("a","b","c")).to eq "b"
+  end
+
 end
