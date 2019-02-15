@@ -1,10 +1,13 @@
 require "SayHelloToMyFriend"
 
 describe SayHelloToMyLittleFriend do
+  let(:dbl) {double new: dbl2 }
+  let(:dbl2) { double message: dbl3}
+  let (:dbl3) {double}
+  let(:subject) {described_class.new(dbl)}
   it "tests the run method" do
-    dbl = double()
-    dbl2 = double(message: dbl)
-    expect(dbl).to receive(:send)
-    subject.run(dbl2)
+
+    expect(dbl3).to receive(:send)
+    subject.run
   end
 end
